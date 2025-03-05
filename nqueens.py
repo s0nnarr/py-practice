@@ -13,7 +13,7 @@ def calitate(p):
     # p is the arrangement of queens. p[i] represents the position of the queen.
     n = p.size
     valoare = int(n*(n-1)/2)
-    # valoare/value = maximum possible valid pairs.
+
     for i in range (n-1):
         for j in range(i+1, n):
             if abs(i-j) == abs(p[i] - p[j]): # If two queens are on the same diagonal
