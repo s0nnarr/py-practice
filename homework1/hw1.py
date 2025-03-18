@@ -36,29 +36,41 @@ Calculați și afișați indivizii cu cea mai mare valoare a funcției calitate.
 
 """
 
-def generate_individual():
-    individual = [random.choice([0, 1]) for _ in range(5)]
-    quality = sum(1 for i in range(4) if individual[i] != individual[i+1])
-    return individual, quality
+# def generate_individual():
+#     individual = [random.choice([0, 1]) for _ in range(5)]
+#     quality = sum(1 for i in range(4) if individual[i] != individual[i+1])
+#     return individual, quality
 
-def generate_population(size=18):
-    # generate a matrix with 18 lines by default
-    population = [generate_individual() for _ in range(size)]
-    return population
+# def generate_population(size=18):
+#     # generate a matrix with 18 lines by default
+#     population = [generate_individual() for _ in range(size)]
+#     return population
 
-def print_population(population):
-    max_quality = max(q for _, q in population)
+# def print_population(population):
+#     max_quality = max(q for _, q in population)
 
-    print("\nGenerated population: ")
-    for individual, quality in population:
-        print(f"Individ: {individual} | Calitate: {quality}")
+#     print("\nGenerated population: ")
+#     for individual, quality in population:
+#         print(f"Individ: {individual} | Calitate: {quality}")
 
-    print("\nIndivizii cu cea mai mare calitate: ");
-    for individual, quality in population: 
-        if quality == max_quality:
-            print(f"Individ: {individual} | Calitate: {quality}")
+#     print("\nIndivizii cu cea mai mare calitate: ");
+#     for individual, quality in population: 
+#         if quality == max_quality:
+#             print(f"Individ: {individual} | Calitate: {quality}")
 
-population = generate_population()
-print_population(population)
+# population = generate_population()
+# print_population(population)
 
 
+"""
+
+3. Scrieți o funcție Python pentru implementarea funcției de maxim
+𝑓: {𝑥 = (𝑥1, … , 𝑥10) 𝑥𝑖 ∈ [−1,1], 𝑥1 + ⋯ + 𝑥9 = 1 − 𝑥10⁄ } → ℝ
+𝑓(𝑥) = 𝑎1 ∙ 𝑥1 + ⋯ + 𝑎10 ∙ 𝑥10
+unde 𝑎 = (𝑎1, … , 𝑎10) este un vector constant, dată de intrare.
+Generați 10 elemente din spațiul soluțiilor, evaluați-le și afișați valorea medie obținută.
+
+"""
+
+def f(x, y, z):
+    
