@@ -14,7 +14,7 @@ def generare_populatie(dimensiune, n):
 def mutatie_populatie(copii, calitati_copii, probabilitate_mutatie):
     copii_m = copii.copy()
     calitati_m = calitati_copii.copy()
-    lines = copii.shape[0]
+    lines = copii.shape[0] 
     col = copii.shape[1]
     for i in range(lines):
         mutat = False
@@ -25,7 +25,7 @@ def mutatie_populatie(copii, calitati_copii, probabilitate_mutatie):
                 mutat = True
             if mutat:
                 calitati_m[i] = fitness(copii_m[i])
-    return copii_m, calitati_m
+    return copii_m, calitati_m 
 
 # In this case, copii_m means copii mutati, and calitati_m means calitati_copii_mutati.
 if __name__ == "__main__":
@@ -39,6 +39,4 @@ if __name__ == "__main__":
     populatie_mutata, calitati_copii_mutati = mutatie_populatie(populatie, calitati, 0.1)
     print(populatie_mutata)
     print(calitati_copii_mutati)
-
-
 
