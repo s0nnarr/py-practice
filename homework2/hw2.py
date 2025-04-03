@@ -47,6 +47,7 @@ def mutatie_inserare(pop, pm):
     return popm
 
 if __name__ == "__main__":
+    # Ex 1.
     dim = 5 # Nr. indivizi
     n = 6 # Lungimea permutarii
     pm = 0.2 # Probabilitatea de mutatie
@@ -55,4 +56,7 @@ if __name__ == "__main__":
 
     popm = mutatie_inserare(pop, pm)
     print(f"Pop. dupa mutatie: \n{popm}")
+
+
+    # Ex 2.
 
