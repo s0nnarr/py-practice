@@ -6,14 +6,14 @@ import matplotlib.pyplot as grafic
 
 def elitism(pop_curenta, cal_curente, copii_m, cal_copii_m, dimensiune):
     gen_urmatoare = copii_m.copy()
-    cal_urmatoare = calitati_copii_m.copy()
+    cal_urmatoare = cal_copii_m.copy()
 
     max_curent = max(cal_curente)
     max_copii_m = max(cal_copii_m)
 
     if max_curent > max_copii_m:
         index_max = np.argmax(cal_curente)
-        index_inlocuit = np.randint(0, dimensiune)
+        index_inlocuit = np.random.randint(0, dimensiune)
         gen_urmatoare[index_inlocuit] = pop_curenta[index_max].copy()
         cal_urmatoare[index_inlocuit] = cal_copii_m[index_max]
     return gen_urmatoare, cal_urmatoare
